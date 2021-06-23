@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TomesRUs.Data;
 
-namespace TomesRUs.Data.Migrations
+namespace TomesRUs.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20210623025553_This is awful")]
-    partial class Thisisawful
+    [Migration("20210623030504_Updated Models")]
+    partial class UpdatedModels
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

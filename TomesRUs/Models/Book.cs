@@ -13,7 +13,7 @@ namespace TomesRUs.Models
         public string Title { get; set; }
         public int ReleasedDate { get; set; }
         [ForeignKey("Author")]
-        public int AuthorID { get; set; }
+        public long AuthorID { get; set; }
         public Author Author { get; set; }
         public Book()
         {
