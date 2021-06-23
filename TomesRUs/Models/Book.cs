@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -14,10 +15,11 @@ namespace TomesRUs.Models
         [ForeignKey("Author")]
         public int AuthorID { get; set; }
         public Author Author { get; set; }
+        public Book()
+        {
+            //This is a constructor.
+        }
     }
 
-    public Book()
-    {
-        //This is a constructor.
-    }
+    
 }

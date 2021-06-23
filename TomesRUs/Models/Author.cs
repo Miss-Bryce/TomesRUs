@@ -19,11 +19,11 @@ namespace TomesRUs.Models
             Deceased
         }
         public ICollection<Book> Books { get; set; }
-
+        public Author()
+        {
+            //this is a constructor.
+        }
     }
 
-    public Author()
-    {
-          //this is a constructor.
-    }
+    
 }
