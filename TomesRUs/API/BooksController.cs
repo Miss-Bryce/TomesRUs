@@ -30,7 +30,7 @@ namespace TomesRUs.API
 
         // GET: api/BooksApi/number
         [HttpGet("{id}")]
-        public async Task<ActionResult<Book>> GetProduct(int id)
+        public async Task<ActionResult<Book>> GetProduct(long id)
         {
             var book = await _context.Book.FindAsync(id);
 
@@ -44,7 +44,7 @@ namespace TomesRUs.API
 
         // PUT: api/BooksAPI/number
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBooks(int id, Book book)
+        public async Task<IActionResult> PutBooks(long id, Book book)
         {
             if (id != book.ID)
             {
@@ -85,7 +85,7 @@ namespace TomesRUs.API
 
         // DELETE: api/ProductsApi/number
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteBook(int id)
+        public async Task<IActionResult> DeleteBook(long id)
         {
             var book = await _context.Book.FindAsync(id);
             if (book == null)
@@ -99,7 +99,7 @@ namespace TomesRUs.API
             return NoContent();
         }
 
-        private bool BookExists(int id)
+        private bool BookExists(long id)
         {
             return _context.Book.Any(e => e.ID == id);
         }
