@@ -43,7 +43,6 @@ namespace TomesRUs.API
         }
 
         // PUT: api/BooksAPI/number
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBooks(int id, Book book)
         {
