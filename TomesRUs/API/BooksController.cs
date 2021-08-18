@@ -28,7 +28,7 @@ namespace TomesRUs.API
             return await _context.Book.ToListAsync();
         }
 
-        // GET: api/BooksApi/5
+        // GET: api/BooksApi/number
         [HttpGet("{id}")]
         public async Task<ActionResult<Book>> GetProduct(int id)
         {
@@ -39,10 +39,10 @@ namespace TomesRUs.API
                 return NotFound();
             }
 
-            return book;
+            return new JsonResult(book);
         }
 
-        // PUT: api/BooksAPI/5
+        // PUT: api/BooksAPI/number
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
         public async Task<IActionResult> PutBooks(int id, Book book)
@@ -84,7 +84,7 @@ namespace TomesRUs.API
             return CreatedAtAction("GetBook", new { id = book.ID }, book);
         }
 
-        // DELETE: api/ProductsApi/5
+        // DELETE: api/ProductsApi/number
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook(int id)
         {
