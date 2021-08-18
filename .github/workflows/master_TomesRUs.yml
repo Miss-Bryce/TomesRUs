@@ -53,5 +53,5 @@ jobs:
       with:
         app-name: 'TomesRUs'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_ecb48f847c324d5a90c9bb65ca97d9bf }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_b7ea2be3fd9a46adabe6622418580e89 }}
         package: .
